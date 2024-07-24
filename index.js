@@ -1,5 +1,10 @@
 const config = require('./config.js');
 
+client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag}!`);
+    client.user.setActivity('Genialna Muza', { type: 'PLAYING' });
+});
+
 if(config.shardManager.shardStatus == true){
 
 const { ShardingManager } = require('discord.js');
