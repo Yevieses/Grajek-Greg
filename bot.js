@@ -133,6 +133,11 @@ app.listen(port, () => {
 });
 printWatermark();
 
+client.once('ready', () => {
+    console.log('Bot is online!');
+    client.user.setActivity('Genialna Muza', { type: 'PLAYING' });
+});
+
 /*
 
   ________.__                        _____.___.___________
